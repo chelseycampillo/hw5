@@ -6,7 +6,6 @@ var ySpeed = [];
 function setup() {
   createCanvas(400, 400);
   colorMode(HSB)
-	y[0] = 220;
 	
 	for (var i =0; i < 100; i = i + 1) {
 		ySpeed[i] = random(0,height);
@@ -20,7 +19,7 @@ function draw() {
   // draw pipe
   rect(0, 200, x, 20);
   
-  // draw drip
+  // droplets
 	for (var i = 0; i <= ctr; i = i + 1) {
 		ellipse(x, y[i], 10);
 	}
