@@ -8,9 +8,9 @@ function setup() {
   createCanvas(400, 400);
 	
 	for(var i = 0; i < 100; i++){
-		x[i] = random(190,220);
-		y[i] = random(0,height);
-		ySpeed[i] = random(0,10);
+		x[i] = 195;
+		y[i] = 300;
+		ySpeed[i] = random(0,5);
 		xSpeed[i] = random(-5,5);
 	}
 }
@@ -38,6 +38,14 @@ function draw() {
   	y[i] -= ySpeed[i];
 	}
   
+  // rotate 0.05 radians ~= 2.8 degrees per frame
+  r += 0.05
+	
+	//move horizontally
+	for (var i = 0; i < 100; i++) {
+		x[i] += xSpeed[i];
+	}
+}
   // rotate 0.05 radians ~= 2.8 degrees per frame
   r += 0.05
 	
